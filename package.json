@@ -35,7 +35,6 @@
   "dependencies": {
     "bignumber.js": "^2.1.0",
     "bmp-js": "0.0.3",
-    "buffer": "^5.0.2",
     "exif-parser": "^0.1.9",
     "file-type": "^3.1.0",
     "jpeg-js": "^0.2.0",

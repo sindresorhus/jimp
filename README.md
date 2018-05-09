@@ -1,5 +1,7 @@
 # Jimp #
 
+**Forked to be able to use the latest master**
+
 The "JavaScript Image Manipulation Program" :-)
 
 An image processing library for Node written entirely in JavaScript, with zero native dependencies.
@@ -382,10 +384,10 @@ If you need to do something with the image at the end of the scan:
 ```js
 image.scan(0, 0, image.bitmap.width, image.bitmap.height, function (x, y, idx) {
     // do your stuff..
-    
-    if(x == image.bitmap.width-1 && 
+
+    if(x == image.bitmap.width-1 &&
         y == image.bitmap.height-1) {
-        // image scan finished, do your stuff   
+        // image scan finished, do your stuff
     }
 });
 ```

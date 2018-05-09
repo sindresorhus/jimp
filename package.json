@@ -1,7 +1,7 @@
 {
-  "name": "jimp",
+  "name": "@sindresorhus/jimp",
   "version": "0.2.28",
-  "description": "An image processing library written entirely in JavaScript (i.e. zero external or native dependencies).",
+  "description": "[Forked to be able to use the latest master] An image processing library written entirely in JavaScript (i.e. zero external or native dependencies).",
   "main": "jimp.js",
   "types": "./jimp.d.ts",
   "scripts": {

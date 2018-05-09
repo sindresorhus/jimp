@@ -17,7 +17,6 @@ var BigNumber = require('bignumber.js');
 var BMFont = require("load-bmfont");
 var Path = require("path");
 var MkDirP = require("mkdirp");
-var Request = require("./src/request");
 var EventEmitter = require('events');
 
 var isDef = (v)=> typeof v !== "undefined" && v !== null;
@@ -77,20 +76,7 @@ function bufferFromArrayBuffer (arrayBuffer) {
 }
 
 function loadBufferFromPath (src, cb) {
-    if (FS && typeof FS.readFile === "function" && !src.match(/^(http|ftp)s?:\/\/./)) {
-        FS.readFile(src, cb);
-    } else {
-        Request(src, function (err, response, data) {
-            if (err) return cb(err);
-            if (typeof data === "object" && Buffer.isBuffer(data)) {
-                return cb(null, data);
-            } else {
-                let msg = "Could not load Buffer from <" + src + "> " +
-                          "(HTTP: " + response.statusCode + ")";
-                return Error(msg);
-            }
-        });
-    }
+    FS.readFile(src, cb);
 }
 
 /**

@@ -10,19 +10,13 @@
     "lint:tests": "eslint --env 'mocha' --rule '{no-new: \"off\"}' test/*.js && echo Lint Tests Success",
     "lint:browser": "eslint --rule '{no-new: \"off\"}' browser/src/*.js && echo Lint Browser Success",
     "lint:extra": "eslint --rule '{no-console: \"off\"}' {*/,}{tools,examples}/*.js && echo Lint Extras Success",
-    "test:karma": "CHROME_BIN=\"$(which chrome || which chromium)\" karma",
-    "test:browser:run": "npm run -s test:karma run",
-    "test:browser:once": "npm run -s test:karma start -- --single-run",
-    "test:browser:watch": "npm run -s test:karma start -- --auto-watch",
     "test:node:run": "mocha",
     "test:node:once": "istanbul cover _mocha ./test/*.test.js",
     "test:node:once:nocover": "mocha ./test/*.test.js",
     "test:node:watch": "mocha --reporter min --watch ./test/*.test.js",
     "test:without-lint": "npm run -s test:node:once && npm run -s test:browser:once",
     "test": "npm run -s lint && npm run -s test:without-lint",
-    "test:old": "./test/tests.sh",
-    "browser-build": "node tools/browser-build.js test",
-    "prepublish": "node tools/browser-build.js prepublish"
+    "test:old": "./test/tests.sh"
   },
   "keywords": [
     "image",
@@ -85,6 +79,5 @@
   "bugs": {
     "url": "https://github.com/oliver-moran/jimp/issues"
   },
-  "tonicExampleFilename": "example.js",
-  "browser": "browser/lib/jimp.js"
+  "tonicExampleFilename": "example.js"
 }

@@ -20,9 +20,6 @@ var MkDirP = require("mkdirp");
 var Request = require("./src/request");
 var EventEmitter = require('events');
 
-// polyfill Promise for Node < 0.12
-var Promise = global.Promise || require('es6-promise').Promise;
-
 var isDef = (v)=> typeof v !== "undefined" && v !== null;
 
 // logging methods
